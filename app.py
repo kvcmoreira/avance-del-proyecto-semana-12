@@ -185,3 +185,18 @@ def ver_csv():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+    def guardar_en_json(producto):
+        filename = os.path.join(DATA_DIR, 'datos.json')
+    if os.path.exists(filename):
+        with open(filename, 'r', encoding='utf-8') as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                data = []  # si está vacío o corrupto
+    else:
+        data = []
+
+    data.append(producto)
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)

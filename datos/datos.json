@@ -1,0 +1,12 @@
+[
+    {
+        "nombre": "cemento",
+        "cantidad": 1000,
+        "precio": 8.5
+    },
+    {
+        "nombre": "hierro",
+        "cantidad": 1000,
+        "precio": 8.5
+    }
+]

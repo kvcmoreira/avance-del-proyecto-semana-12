@@ -3,3 +3,10 @@ rqr,5,99.5
 Prueba nueva 2,45,25.3
 cemento,1000,8.5
 cemento,1000,8.5
+cemento,1000,8.5
+cemento,1000,8.5
+cemento,1000,8.5
+cemento,1000,8.5
+cemento,1000,8.5
+cemento,1000,8.5
+hierro,1000,8.5
