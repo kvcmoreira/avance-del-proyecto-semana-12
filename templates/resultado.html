@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Datos desde {{ tipo }}{% endblock %}
+
+{% block content %}
+<h2>Datos desde {{ tipo }}</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto.id }}</td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.cantidad }}</td>
+            <td>${{ producto.precio }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="4" class="text-center">No hay datos.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
