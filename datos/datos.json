@@ -8,5 +8,40 @@
         "nombre": "hierro",
         "cantidad": 1000,
         "precio": 8.5
+    },
+    {
+        "nombre": "cemento",
+        "cantidad": 1000,
+        "precio": 8.5
+    },
+    {
+        "nombre": "tubos pvc",
+        "cantidad": 900,
+        "precio": 30.0
+    },
+    {
+        "nombre": "tubos pvc",
+        "cantidad": 900,
+        "precio": 30.0
+    },
+    {
+        "nombre": "varillas",
+        "cantidad": 900,
+        "precio": 30.0
+    },
+    {
+        "nombre": "hojas de cim",
+        "cantidad": 1000,
+        "precio": 8.5
+    },
+    {
+        "nombre": "hierro",
+        "cantidad": 1000,
+        "precio": 8.5
+    },
+    {
+        "nombre": "material",
+        "cantidad": 56,
+        "precio": 89.0
     }
 ]
