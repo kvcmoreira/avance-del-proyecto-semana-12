@@ -1,25 +1,16 @@
 import mysql.connector
 
-try:
-    conexion = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="ferreteria"
-    )
-
-    cursor = conexion.cursor()
-
-    sql = "INSERT INTO productos (nombre_producto, cantidad, precio, fecha) VALUES (%s, %s, %s, %s)"
-    valores = ("Taladro", 10, 120.00, "2025-09-19")
-    cursor.execute(sql, valores)
-
-    conexion.commit()
-    print(cursor.rowcount, "producto agregado.")
-
-except mysql.connector.Error as err:
-    print("Error:", err)
-
-finally:
-    if conexion.is_connected():
-        conexion.close()
+def obtener_conexion():
+    try:
+        conexion = mysql.connector.connect(
+            host="localhost",
+            user="root",          # usuario de phpMyAdmin
+            password="",          # tu contraseña de MySQL (vacía si no pusiste)
+            database="ferreteria" # tu base de datos
+        )
+        if conexion.is_connected():
+            print("✅ Conexión exitosa a la base de datos")
+        return conexion
+    except mysql.connector.Error as err:
+        print("❌ Error al conectar:", err)
+        return None
