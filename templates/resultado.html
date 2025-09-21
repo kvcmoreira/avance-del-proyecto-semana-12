@@ -1,28 +1,16 @@
-{% extends "base.html" %}
-{% block title %}Datos desde {{ tipo }}{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Producto Agregado</title>
+</head>
+<body>
+<h2>Producto agregado con éxito!</h2>
+<p>Nombre: {{ nombre }}</p>
+<p>Cantidad: {{ cantidad }}</p>
+<p>Precio: {{ precio }}</p>
 
-{% block content %}
-<h2>Datos desde {{ tipo }}</h2>
-<table class="table table-striped">
-    <thead class="table-dark">
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for producto in productos %}
-        <tr>
-            <td>{{ producto.id }}</td>
-            <td>{{ producto.nombre }}</td>
-            <td>{{ producto.cantidad }}</td>
-            <td>${{ producto.precio }}</td>
-        </tr>
-        {% else %}
-        <tr><td colspan="4" class="text-center">No hay datos.</td></tr>
-        {% endfor %}
-    </tbody>
-</table>
-{% endblock %}
+<a href="{{ url_for('formulario') }}">Agregar otro producto</a><br>
+<a href="{{ url_for('lista') }}">Ver Lista de Productos</a><br>
+<a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>
+</body>
+</html>

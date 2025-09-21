@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h2>Hola {{ user.nombre }}!</h2>
+<p>Bienvenido a tu panel de control.</p>
+
+<a href="{{ url_for('formulario') }}">Agregar Producto</a><br>
+<a href="{{ url_for('lista') }}">Ver Lista de Productos</a><br>
+<a href="{{ url_for('logout') }}">Cerrar sesión</a>
+</body>
+</html>
