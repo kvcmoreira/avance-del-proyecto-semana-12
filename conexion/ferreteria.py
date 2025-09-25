@@ -55,3 +55,12 @@ if __name__ == "__main__":
     actualizar_producto(1, cantidad=50)                      # Actualiza cantidad del producto con ID=1
     eliminar_producto(2)                                     # Elimina el producto con ID=2
     listar_productos()                  # Lista productos nuevamente
+
+CREATE TABLE `usuarios` (
+  `idusuarios` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(210) DEFAULT NULL,
+  PRIMARY KEY (`idusuarios`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+ 
