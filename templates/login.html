@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <title>Login - Ferretería</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-<h2>Login de Usuario</h2>
+    <div class="form-container">
+        <h2>🔑 Iniciar Sesión</h2>
+        <form method="POST">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required>
 
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul>
-    {% for message in messages %}
-      <li style="color:red">{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
 
-<form method="POST">
-    Email: <input type="email" name="email" required><br>
-    Password: <input type="password" name="password" required><br>
-    <button type="submit">Ingresar</button>
-</form>
-<a href="{{ url_for('register') }}">Registrarse</a>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="{{ url_for('register') }}">Regístrate aquí</a></p>
+    </div>
 </body>
 </html>
-
